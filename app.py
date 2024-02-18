@@ -74,6 +74,9 @@ def predict():
     # df = pd.DataFrame([my_dict],columns=columns)
     df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
     prediction = model.predict(df)[0]
+    probability = model.predict_proba(df)[0]
+    probability=np.array(probability)
+    print(probability[1])
     print(model.predict(df)[0])
      
     if prediction == 1:
