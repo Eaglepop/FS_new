@@ -71,8 +71,8 @@ def predict():
     #    Pain_level_D0, Pain_level_D1, Re_inflammation,
     #    Diabetes, Tilting, Foreskin_edema,Surg_time,Tool_type])
     df = pd.DataFrame.from_dict([my_dict])
-    # X = pd.DataFrame([row],columns=columns)
-    df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
+    df = pd.DataFrame([my_dict],columns=columns)
+    # df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
     prediction = model.predict(df)[0]
     
     if prediction == 1:
