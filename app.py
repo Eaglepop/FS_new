@@ -5,6 +5,7 @@ import xgboost
 import streamlit as st
 import pickle
 import pandas as pd
+import numpy as np
 # import joblib
 # import streamlit.web.cli 
 # from streamlit.web.cli import main
@@ -64,15 +65,27 @@ columns = ['Age', 'Height', 'Weight', 'Penis_length', 'Phimosis_Grading',
        'Pain_level_D0', 'Pain_level_D1', 'Re_inflammation',
        'Diabetes', 'Tilting', 'Foreskin_edema','Surg_time','Tool_type']
 
-df = pd.DataFrame.from_dict([my_dict])
-# And appended column names into column list. We need columns to use with reindex method as we mentioned before.
-df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
-# We append all columns in the user input dataframe and reindex method just received relevant user inputs , and return other columns from nan to zero with fill_value=0 parameter.
-# And now we can predict
-print(df.index)
-prediction = model.predict(df)
-# Success method demonstrate our prediction in a green square
-st.success("The estimated price of your car is €{}. ".format(int(prediction[0])))
+
+def predict():
+    row = np.array([Age, Height, Weight, Penis_length, Phimosis_Grading,
+       Pain_level_D0, Pain_level_D1, Re_inflammation,
+       Diabetes, Tilting, Foreskin_edema,Surg_time,Tool_type])
+    X = pd.DataFrame([row],columns=columns)
+    prediction = model.predict(X)[0]
+    
+    if prediction == 1:
+        st.success('bleed')
+    else:
+        st.error('no bleed')
+
+st.button('Predict', on_click=predict)
+# df = pd.DataFrame.from_dict([my_dict])
+# # And appended column names into column list. We need columns to use with reindex method as we mentioned before.
+# df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
+# # We append all columns in the user input dataframe and reindex method just received relevant user inputs , and return other columns from nan to zero with fill_value=0 parameter.
+# # And now we can predict
+# print(df.index)
+# prediction = model.predict(df)
 
 
 
