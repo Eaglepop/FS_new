@@ -81,7 +81,8 @@ def predict():
         st.error('no bleed')
         
     print(model.predict(df)[0])
-    print(model.predict(df)[1])
+    a=model.predict(df)[1]
+    print(a)
     
 
 st.button('Predict', on_click=predict)
