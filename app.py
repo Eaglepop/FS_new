@@ -72,17 +72,17 @@ def predict():
     #    Diabetes, Tilting, Foreskin_edema,Surg_time,Tool_type])
     df = pd.DataFrame.from_dict([my_dict])
     # df = pd.DataFrame([my_dict],columns=columns)
-    # df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
+    df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
     prediction = model.predict(df)[0]
-    
+    print(model.predict(df)[0])
+     
     if prediction == 1:
         st.success('bleed')
     else:
         st.error('no bleed')
         
-    print(model.predict(df)[0])
-    a=model.predict(df)[1]
-    print(a)
+   
+    
     
 
 st.button('Predict', on_click=predict)
