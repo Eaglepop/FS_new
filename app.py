@@ -67,11 +67,13 @@ columns = ['Age', 'Height', 'Weight', 'Penis_length', 'Phimosis_Grading',
 
 
 def predict():
-    row = np.array([Age, Height, Weight, Penis_length, Phimosis_Grading,
-       Pain_level_D0, Pain_level_D1, Re_inflammation,
-       Diabetes, Tilting, Foreskin_edema,Surg_time,Tool_type])
-    X = pd.DataFrame([row],columns=columns)
-    prediction = model.predict(X)[0]
+    # row = np.array([Age, Height, Weight, Penis_length, Phimosis_Grading,
+    #    Pain_level_D0, Pain_level_D1, Re_inflammation,
+    #    Diabetes, Tilting, Foreskin_edema,Surg_time,Tool_type])
+    df = pd.DataFrame.from_dict([my_dict])
+    # X = pd.DataFrame([row],columns=columns)
+    df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
+    prediction = model.predict(df)[0]
     
     if prediction == 1:
         st.success('bleed')
@@ -79,6 +81,7 @@ def predict():
         st.error('no bleed')
 
 st.button('Predict', on_click=predict)
+
 # df = pd.DataFrame.from_dict([my_dict])
 # # And appended column names into column list. We need columns to use with reindex method as we mentioned before.
 # df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
