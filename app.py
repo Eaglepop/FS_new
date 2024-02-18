@@ -80,9 +80,9 @@ def predict():
     print(model.predict(df)[0])
      
     if prediction == 1:
-        st.success('bleed')
+        st.success('bleed',probability)
     else:
-        st.error('no bleed')
+        st.error('no bleed',probability)
         
    
     
