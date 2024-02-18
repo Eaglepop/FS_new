@@ -81,10 +81,10 @@ def predict():
      
     if prediction == 1:
         st.success('bleed')
-        st.write(probability)
+        st.write('Bleeding probability:', probability[1])
     else:
         st.error('no bleed')
-        st.write(probability)
+        st.write('Bleeding probability:', probability[1])
         
    
     
