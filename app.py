@@ -81,7 +81,7 @@ def predict():
         st.error('no bleed')
         
     print(model.predict(df)[0])
-    a=model.predict(df)[1]
+    a=model.predict(df)
     print(a)
     
 
