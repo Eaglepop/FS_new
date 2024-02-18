@@ -73,12 +73,12 @@ def predict():
     df = pd.DataFrame.from_dict([my_dict])
     # X = pd.DataFrame([row],columns=columns)
     df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
-    prediction = model.predict(df)[0]
+    prediction = model.predict(df)[1]
     
-    if prediction == 1:
-        st.success('bleed')
-    else:
-        st.error('no bleed')
+    # if prediction == 1:
+    #     st.success('bleed')
+    # else:
+    #     st.error('no bleed')
 
 st.button('Predict', on_click=predict)
 
