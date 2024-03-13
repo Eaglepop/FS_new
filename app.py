@@ -21,10 +21,10 @@ st.title('Foreskin Infection Prediction')
 # model1 =pickle.load(open("ada_xgb.pkl","rb"))
 # model1 = joblib.load("ada_xgb.pkl")
 # model2= pickle.load(open("ada_xgb.pkl","rb"))
-with open('/I_Models/ros_xgb_i.pkl', 'rb') as f:
+with open('I_Models/ros_xgb_i.pkl', 'rb') as f:
     model1 = pickle.load(f)
 
-with open('/I_Models/ros_rf_i', 'rb') as f:
+with open('I_Models/ros_rf_i', 'rb') as f:
     model2 = pickle.load(f)
 
 with open('/I_Models/ros_lgbm_i.pkl', 'rb') as f:
