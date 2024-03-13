@@ -14,26 +14,99 @@ import sys
 # sys.path.append('/opt/homebrew/anaconda3/envs/venv38/lib/python3.8/site-packages')
 
 # Create a app title with title method
-st.title('Foreskin Prediction')
+st.title('Foreskin Infection Prediction')
+
+
 # We called back our models created before
 # model1 =pickle.load(open("ada_xgb.pkl","rb"))
 # model1 = joblib.load("ada_xgb.pkl")
-with open('ada_xgb.pkl', 'rb') as f:
+# model2= pickle.load(open("ada_xgb.pkl","rb"))
+with open('/I_Models/ros_xgb_i.pkl', 'rb') as f:
     model1 = pickle.load(f)
 
-# model2= pickle.load(open("ada_xgb.pkl","rb"))
-with open('ada_xgb.pkl', 'rb') as f:
+with open('/I_Models/ros_rf_i', 'rb') as f:
     model2 = pickle.load(f)
 
+with open('/I_Models/ros_lgbm_i.pkl', 'rb') as f:
+    model3 = pickle.load(f)
+
+with open('/I_Models/smt_xgb_i.pkl', 'rb') as f:
+    model4 = pickle.load(f)
+
+with open('/I_Models/smt_rf_i', 'rb') as f:
+    model5 = pickle.load(f)
+
+with open('/I_Models/smt_lgbm_i.pkl', 'rb') as f:
+    model6 = pickle.load(f)
+    
+with open('/I_Models/smtnc_xgb_i.pkl', 'rb') as f:
+    model7 = pickle.load(f)
+
+with open('/I_Models/smtnc_rf_i', 'rb') as f:
+    model8 = pickle.load(f)
+
+with open('/I_Models/smtnc_lgbm_i.pkl', 'rb') as f:
+    model9 = pickle.load(f)
+
+with open('/I_Models/smttom_xgb_i.pkl', 'rb') as f:
+    model10 = pickle.load(f)
+
+with open('/I_Models/smttom_rf_i', 'rb') as f:
+    model11 = pickle.load(f)
+
+with open('/I_Models/smttom_lgbm_i.pkl', 'rb') as f:
+    model12 = pickle.load(f)
+
+with open('/I_Models/ada_xgb_i.pkl', 'rb') as f:
+    model13 = pickle.load(f)
+
+with open('/I_Models/ada_rf_i', 'rb') as f:
+    model14 = pickle.load(f)
+
+with open('/I_Models/ada_lgbm_i.pkl', 'rb') as f:
+    model15 = pickle.load(f)
+    
+
 # We use selectbox method and append our models to give a choice clients
-models = st.selectbox("Select Model",("Random Forest","XGBoost","LightGBM") )
+models = st.selectbox("Select Model",("ros_xgb","ros_rf","ros_lgbm",
+                                      "smt_xgb","smt_rf","smt_lgbm",
+                                      "smtnc_xgb","smtnc_rf","smtnc_lgbm",
+                                      "smttom_xgb","smttom_rf","smttom_lgbm",
+                                      "ada_xgb","ada_rf","ada_lgbm") )
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
-if models == "Random Forest":
+if models == "ros_xgb":
+    model = model1
+elif models == "ros_rf":
     model = model2
-elif models == "aaaa":
-    model = model1
-else :
-    model = model1
+elif models == "ros_lgbm":
+    model = model3
+elif models == "smt_xgb":
+    model = model4
+elif models == "smt_rf":
+    model = model5
+elif models == "smt_lgbm":
+    model = model6
+elif models == "smtnc_xgb":
+    model = model7
+elif models == "smtnc_rf":
+    model = model8
+elif models == "smtnc_lgbm":
+    model = model9
+elif models == "smttom_xgb":
+    model = model10
+elif models == "smttom_rf":
+    model = model11
+elif models == "smttom_lgbm":
+    model = model12
+elif models == "ada_xgb":
+    model = model13
+elif models == "ada_rf":
+    model = model14
+elif models == "ada_lgbm":
+    model = model15
+# else :
+#     model = model1
+
 # We created selectbox for categorical columns and used slider numerical values ,specified range and step
 # age = st.selectbox("What is the age of your car?",(1,2,3))
 # hp = st.slider("What is the horsepower of your car",60,200,step=5)
