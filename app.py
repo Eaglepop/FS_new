@@ -30,6 +30,8 @@ models = st.selectbox("Select Model",("Random Forest","XGBoost","LightGBM") )
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
 if models == "Random Forest":
     model = model2
+elif models == "aaaa":
+    model = model1
 else :
     model = model1
 # We created selectbox for categorical columns and used slider numerical values ,specified range and step
