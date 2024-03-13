@@ -21,52 +21,109 @@ st.title('Foreskin Infection Prediction')
 # model1 =pickle.load(open("ada_xgb.pkl","rb"))
 # model1 = joblib.load("ada_xgb.pkl")
 # model2= pickle.load(open("ada_xgb.pkl","rb"))
-with open('I_Models/ros_xgb_i.pkl', 'rb') as f:
-    model1 = pickle.load(f)
+# with open('I_Models/ros_xgb_i.pkl', 'rb') as f:
+#     model1 = pickle.load(f)
 
 # with open('/Users/isadmin/Desktop/研究所課程/fs_streamlit/I_Models/ros_rf_i.pkl', 'rb') as f:
 #     model2 = pickle.load(f)
 
-with open('I_Models/ros_lgbm_i.pkl', 'rb') as f:
+# with open('I_Models/ros_lgbm_i.pkl', 'rb') as f:
+#     model3 = pickle.load(f)
+
+# with open('/I_Models/smt_xgb_i.pkl', 'rb') as f:
+#     model4 = pickle.load(f)
+
+# with open('/I_Models/smt_rf_i.pkl', 'rb') as f:
+#     model5 = pickle.load(f)
+
+# with open('/I_Models/smt_lgbm_i.pkl', 'rb') as f:
+#     model6 = pickle.load(f)
+    
+# with open('/I_Models/smtnc_xgb_i.pkl', 'rb') as f:
+#     model7 = pickle.load(f)
+
+# with open('/I_Models/smtnc_rf_i', 'rb') as f:
+#     model8 = pickle.load(f)
+
+# with open('/I_Models/smtnc_lgbm_i.pkl', 'rb') as f:
+#     model9 = pickle.load(f)
+
+# with open('/I_Models/smttom_xgb_i.pkl', 'rb') as f:
+#     model10 = pickle.load(f)
+
+# with open('/I_Models/smttom_rf_i', 'rb') as f:
+#     model11 = pickle.load(f)
+
+# with open('/I_Models/smttom_lgbm_i.pkl', 'rb') as f:
+#     model12 = pickle.load(f)
+
+# with open('/I_Models/ada_xgb_i.pkl', 'rb') as f:
+#     model13 = pickle.load(f)
+
+# with open('/I_Models/ada_rf_i', 'rb') as f:
+#     model14 = pickle.load(f)
+
+# with open('/I_Models/ada_lgbm_i.pkl', 'rb') as f:
+#     model15 = pickle.load(f)
+    
+
+
+
+
+
+with open('ros_xgb_i.pkl', 'rb') as f:
+    model1 = pickle.load(f)
+
+with open('ros_rf_i.pkl', 'rb') as f:
+    model2 = pickle.load(f)
+
+with open('ros_lgbm_i.pkl', 'rb') as f:
     model3 = pickle.load(f)
 
-with open('/I_Models/smt_xgb_i.pkl', 'rb') as f:
+with open('smt_xgb_i.pkl', 'rb') as f:
     model4 = pickle.load(f)
 
-with open('/I_Models/smt_rf_i', 'rb') as f:
+with open('smt_rf_i.pkl', 'rb') as f:
     model5 = pickle.load(f)
 
-with open('/I_Models/smt_lgbm_i.pkl', 'rb') as f:
+with open('smt_lgbm_i.pkl', 'rb') as f:
     model6 = pickle.load(f)
     
-with open('/I_Models/smtnc_xgb_i.pkl', 'rb') as f:
+with open('smtnc_xgb_i.pkl', 'rb') as f:
     model7 = pickle.load(f)
 
-with open('/I_Models/smtnc_rf_i', 'rb') as f:
+with open('smtnc_rf_i.pkl', 'rb') as f:
     model8 = pickle.load(f)
 
-with open('/I_Models/smtnc_lgbm_i.pkl', 'rb') as f:
+with open('smtnc_lgbm_i.pkl', 'rb') as f:
     model9 = pickle.load(f)
 
-with open('/I_Models/smttom_xgb_i.pkl', 'rb') as f:
+with open('smttom_xgb_i.pkl', 'rb') as f:
     model10 = pickle.load(f)
 
-with open('/I_Models/smttom_rf_i', 'rb') as f:
+with open('smttom_rf_i.pkl', 'rb') as f:
     model11 = pickle.load(f)
 
-with open('/I_Models/smttom_lgbm_i.pkl', 'rb') as f:
+with open('/smttom_lgbm_i.pkl', 'rb') as f:
     model12 = pickle.load(f)
 
-with open('/I_Models/ada_xgb_i.pkl', 'rb') as f:
+with open('ada_xgb_i.pkl', 'rb') as f:
     model13 = pickle.load(f)
 
-with open('/I_Models/ada_rf_i', 'rb') as f:
+with open('ada_rf_i.pkl', 'rb') as f:
     model14 = pickle.load(f)
 
-with open('/I_Models/ada_lgbm_i.pkl', 'rb') as f:
+with open('ada_lgbm_i.pkl', 'rb') as f:
     model15 = pickle.load(f)
     
-
+    
+    
+    
+    
+    
+    
+    
+    
 # We use selectbox method and append our models to give a choice clients
 models = st.selectbox("Select Model",("ros_xgb","ros_rf","ros_lgbm",
                                       "smt_xgb","smt_rf","smt_lgbm",
