@@ -27,7 +27,7 @@ with open('I_Models/ros_xgb_i.pkl', 'rb') as f:
 with open('I_Models/ros_rf_i', 'rb') as f:
     model2 = pickle.load(f)
 
-with open('/I_Models/ros_lgbm_i.pkl', 'rb') as f:
+with open('I_Models/ros_lgbm_i.pkl', 'rb') as f:
     model3 = pickle.load(f)
 
 with open('/I_Models/smt_xgb_i.pkl', 'rb') as f:
