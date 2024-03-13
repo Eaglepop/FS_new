@@ -213,10 +213,10 @@ def predict():
     print(model.predict(df)[0])
      
     if prediction == 1:
-        st.success('bleed')
+        st.success('Infected')
         st.write('Bleeding probability:', probability[1])
     else:
-        st.error('no bleed')
+        st.error('Not Infected')
         st.write('Bleeding probability:', probability[1])
         
    
