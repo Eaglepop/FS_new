@@ -24,7 +24,7 @@ st.title('Foreskin Infection Prediction')
 with open('I_Models/ros_xgb_i.pkl', 'rb') as f:
     model1 = pickle.load(f)
 
-with open('I_Models/ros_rf_i', 'rb') as f:
+with open('/Users/isadmin/Desktop/研究所課程/fs_streamlit/I_Models/ros_rf_i.pkl', 'rb') as f:
     model2 = pickle.load(f)
 
 with open('I_Models/ros_lgbm_i.pkl', 'rb') as f:
