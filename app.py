@@ -214,10 +214,10 @@ def predict():
      
     if prediction == 1:
         st.success('Infected')
-        st.write('Bleeding probability:', probability[1])
+        st.write('Infected probability:', probability[1])
     else:
         st.error('Not Infected')
-        st.write('Bleeding probability:', probability[1])
+        st.write('Infected probability:', probability[1])
         
    
     
