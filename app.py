@@ -227,8 +227,6 @@ def predict():
         # st.success('<p style= "font-size": 50px;>Infected</p>')
         st.success('Infected')
         
-        st.markdown('<p color:Green; style= "font-size": 100px;>{success}</p>', unsafe_allow_html=True)
-        
         st.write('Infected probability:', probability[1])
     else:
         # error='<p color:Red; style= "font-size": 100px;>NotInfected</p>'
@@ -238,7 +236,6 @@ def predict():
         # st.error('<p style= "font-size": 50px;>Not Infected</p>')
         st.error('Not Infected')
         
-        st.markdown('<p color:Red; style= "font-size": 100px;>{error}</p>', unsafe_allow_html=True)
         
         st.write('Infected probability:', probability[1])
         
