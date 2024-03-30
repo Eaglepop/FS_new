@@ -219,13 +219,15 @@ def predict():
     print(model.predict(df)[0])
      
     if prediction == 1:
-        st.markdown('<p style= "font-size": 100px;>Infected</p>', unsafe_allow_html=True)
+        success='<p color:Green; style= "font-size": 100px;>Infected</p>'
+        st.markdown(success, unsafe_allow_html=True)
 
         # st.success('<p style= "font-size": 50px;>Infected</p>')
         st.success('Infected')
         st.write('Infected probability:', probability[1])
     else:
-        st.markdown('<p style= "font-size": 100px;>Not Infected</p>', unsafe_allow_html=True)
+        error='<p color:Red; style= "font-size": 100px;>NotInfected</p>'
+        st.markdown(error, unsafe_allow_html=True)
 
         
         # st.error('<p style= "font-size": 50px;>Not Infected</p>')
