@@ -15,7 +15,7 @@ import sys
 # sys.path.append('/opt/homebrew/anaconda3/envs/venv38/lib/python3.8/site-packages')
 
 # Create a app title with title method
-st.title('Foreskin Infection Prediction')
+st.title('Post-DCSD')
 
 
 # We called back our models created before
@@ -133,38 +133,41 @@ models = st.selectbox("Select Model",("ros_xgb","ros_rf","ros_lgbm",
                                       "smttom_xgb","smttom_rf","smttom_lgbm",
                                       "ada_xgb","ada_rf","ada_lgbm") )
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
-if models == "ros_xgb":
-    model = model1
-elif models == "ros_rf":
-    model = model2
-elif models == "ros_lgbm":
-    model = model3
-elif models == "smt_xgb":
-    model = model4
-elif models == "smt_rf":
-    model = model5
-elif models == "smt_lgbm":
-    model = model6
-elif models == "smtnc_xgb":
-    model = model7
-elif models == "smtnc_rf":
-    model = model8
-elif models == "smtnc_lgbm":
-    model = model9
-elif models == "smttom_xgb":
-    model = model10
-elif models == "smttom_rf":
-    model = model11
-elif models == "smttom_lgbm":
-    model = model12
-elif models == "ada_xgb":
+if models == "ada_xgb":
     model = model13
 elif models == "ada_rf":
     model = model14
-elif models == "ada_lgbm":
-    model = model15
-# else :
+# if models == "ros_xgb":
 #     model = model1
+# elif models == "ros_rf":
+#     model = model2
+# elif models == "ros_lgbm":
+#     model = model3
+# elif models == "smt_xgb":
+#     model = model4
+# elif models == "smt_rf":
+#     model = model5
+# elif models == "smt_lgbm":
+#     model = model6
+# elif models == "smtnc_xgb":
+#     model = model7
+# elif models == "smtnc_rf":
+#     model = model8
+# elif models == "smtnc_lgbm":
+#     model = model9
+# elif models == "smttom_xgb":
+#     model = model10
+# elif models == "smttom_rf":
+#     model = model11
+# elif models == "smttom_lgbm":
+#     model = model12
+# elif models == "ada_xgb":
+#     model = model13
+# elif models == "ada_rf":
+#     model = model14
+# elif models == "ada_lgbm":
+#     model = model15
+
 
 # We created selectbox for categorical columns and used slider numerical values ,specified range and step
 # age = st.selectbox("What is the age of your car?",(1,2,3))
@@ -214,10 +217,12 @@ def predict():
     print(model.predict(df)[0])
      
     if prediction == 1:
-        st.success('Infected')
+        st.success('<p style= "font-size": 50px;>Infected</p>')
+        # st.success('Infected')
         st.write('Infected probability:', probability[1])
     else:
-        st.error('Not Infected')
+        st.error('<p style= "font-size": 50px;>Not Infected</p>')
+        # st.error('Not Infected')
         st.write('Infected probability:', probability[1])
         
    
