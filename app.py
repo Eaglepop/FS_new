@@ -132,12 +132,12 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 #                                       "smtnc_xgb","smtnc_rf","smtnc_lgbm",
 #                                       "smttom_xgb","smttom_rf","smttom_lgbm",
 #                                       "ada_xgb","ada_rf","ada_lgbm") )
-models = st.selectbox("Select Model",("ada_xgb","ada_rf") )
+models = st.selectbox("Select Model",("xgb","rf") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
-if models == "ada_xgb":
+if models == "xgb":
     model = model13
-elif models == "ada_rf":
+elif models == "rf":
     model = model14
 # if models == "ros_xgb":
 #     model = model1
