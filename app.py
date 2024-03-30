@@ -221,6 +221,8 @@ def predict():
     if prediction == 1:
         success='<p color:Green; style= "font-size": 100px;>Infected</p>'
         st.markdown(success, unsafe_allow_html=True)
+        st.markdown('<p color:Green; style= "font-size": 100px;>Infected probability: probability[1]</p>', unsafe_allow_html=True)
+
 
         # st.success('<p style= "font-size": 50px;>Infected</p>')
         st.success('Infected')
