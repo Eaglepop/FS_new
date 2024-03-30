@@ -73,41 +73,41 @@ st.title('Post-DCSD')
 
 
 
-# with open('ros_xgb_i.pkl', 'rb') as f:
-#     model1 = pickle.load(f)
+with open('ros_xgb_i.pkl', 'rb') as f:
+    model1 = pickle.load(f)
 
-# with open('ros_rf_i.pkl', 'rb') as f:
-#     model2 = pickle.load(f)
+with open('ros_rf_i.pkl', 'rb') as f:
+    model2 = pickle.load(f)
 
-# with open('ros_lgbm_i.pkl', 'rb') as f:
-#     model3 = pickle.load(f)
+with open('ros_lgbm_i.pkl', 'rb') as f:
+    model3 = pickle.load(f)
 
-# with open('smt_xgb_i.pkl', 'rb') as f:
-#     model4 = pickle.load(f)
+with open('smt_xgb_i.pkl', 'rb') as f:
+    model4 = pickle.load(f)
 
-# with open('smt_rf_i.pkl', 'rb') as f:
-#     model5 = pickle.load(f)
+with open('smt_rf_i.pkl', 'rb') as f:
+    model5 = pickle.load(f)
 
-# with open('smt_lgbm_i.pkl', 'rb') as f:
-#     model6 = pickle.load(f)
+with open('smt_lgbm_i.pkl', 'rb') as f:
+    model6 = pickle.load(f)
     
-# with open('smtnc_xgb_i.pkl', 'rb') as f:
-#     model7 = pickle.load(f)
+with open('smtnc_xgb_i.pkl', 'rb') as f:
+    model7 = pickle.load(f)
 
-# with open('smtnc_rf_i.pkl', 'rb') as f:
-#     model8 = pickle.load(f)
+with open('smtnc_rf_i.pkl', 'rb') as f:
+    model8 = pickle.load(f)
 
-# with open('smtnc_lgbm_i.pkl', 'rb') as f:
-#     model9 = pickle.load(f)
+with open('smtnc_lgbm_i.pkl', 'rb') as f:
+    model9 = pickle.load(f)
 
-# with open('smttom_xgb_i.pkl', 'rb') as f:
-#     model10 = pickle.load(f)
+with open('smttom_xgb_i.pkl', 'rb') as f:
+    model10 = pickle.load(f)
 
-# with open('smttom_rf_i.pkl', 'rb') as f:
-#     model11 = pickle.load(f)
+with open('smttom_rf_i.pkl', 'rb') as f:
+    model11 = pickle.load(f)
 
-# with open('smttom_lgbm_i.pkl', 'rb') as f:
-#     model12 = pickle.load(f)
+with open('smttom_lgbm_i.pkl', 'rb') as f:
+    model12 = pickle.load(f)
 
 with open('ada_xgb_i.pkl', 'rb') as f:
     model13 = pickle.load(f)
@@ -115,8 +115,8 @@ with open('ada_xgb_i.pkl', 'rb') as f:
 with open('ada_rf_i.pkl', 'rb') as f:
     model14 = pickle.load(f)
 
-# with open('ada_lgbm_i.pkl', 'rb') as f:
-#     model15 = pickle.load(f)
+with open('ada_lgbm_i.pkl', 'rb') as f:
+    model15 = pickle.load(f)
     
     
     
@@ -127,11 +127,13 @@ with open('ada_rf_i.pkl', 'rb') as f:
     
     
 # We use selectbox method and append our models to give a choice clients
-models = st.selectbox("Select Model",("ros_xgb","ros_rf","ros_lgbm",
-                                      "smt_xgb","smt_rf","smt_lgbm",
-                                      "smtnc_xgb","smtnc_rf","smtnc_lgbm",
-                                      "smttom_xgb","smttom_rf","smttom_lgbm",
-                                      "ada_xgb","ada_rf","ada_lgbm") )
+# models = st.selectbox("Select Model",("ros_xgb","ros_rf","ros_lgbm",
+#                                       "smt_xgb","smt_rf","smt_lgbm",
+#                                       "smtnc_xgb","smtnc_rf","smtnc_lgbm",
+#                                       "smttom_xgb","smttom_rf","smttom_lgbm",
+#                                       "ada_xgb","ada_rf","ada_lgbm") )
+models = st.selectbox("Select Model",("ada_xgb","ada_rf") )
+
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
 if models == "ada_xgb":
     model = model13
@@ -217,13 +219,13 @@ def predict():
     print(model.predict(df)[0])
      
     if prediction == 1:
-        st.markdown('<p style= "font-size": 50px;>Infected</p>', unsafe_allow_html=True)
+        st.markdown('<p style= "font-size": 100px;>Infected</p>', unsafe_allow_html=True)
 
         # st.success('<p style= "font-size": 50px;>Infected</p>')
         st.success('Infected')
         st.write('Infected probability:', probability[1])
     else:
-        st.markdown('<p style= "font-size": 50px;>Not Infected</p>', unsafe_allow_html=True)
+        st.markdown('<p style= "font-size": 100px;>Not Infected</p>', unsafe_allow_html=True)
 
         
         # st.error('<p style= "font-size": 50px;>Not Infected</p>')
