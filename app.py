@@ -137,10 +137,10 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 st.markdown('##')
 
 c1, c2 = st.columns([4,1])
-# c1.subheader('Select model')
+c1.subheader('Select model')
 c2.write('Infection caculator')
 
-models = st.selectbox('<p style= "font-size":100px;>Select model</p>',("xgb","rf") )
+models = st.selectbox(c1,("xgb","rf") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
 if models == "xgb":
