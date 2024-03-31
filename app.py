@@ -144,9 +144,9 @@ c2.subheader('Infection caculator')
 models = st.selectbox("",("XGB","RF") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
-if models == "xgb":
+if models == "XGB":
     model = model13
-elif models == "rf":
+elif models == "RF":
     model = model14
 # if models == "ros_xgb":
 #     model = model1
