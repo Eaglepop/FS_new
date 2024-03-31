@@ -271,6 +271,8 @@ def predict():
         # c1.markdown(str21, unsafe_allow_html=True)                    
         st.markdown(str22, unsafe_allow_html=True)
         
+        st.markdown('##')
+        
         
         # st.subheader('Infected probability:', probability[1])
     else:
