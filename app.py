@@ -259,7 +259,7 @@ def predict():
                             color: rgb(255,255,255,1);
                             {sd}</style>
                             <BR></p>"""
-        st.markdown(sd, unsafe_allow_html=True)
+        st.markdown(str2, unsafe_allow_html=True)
         
         
         # st.subheader('Infected probability:', probability[1])
