@@ -136,11 +136,11 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 
 st.markdown('##')
 
-c1, c2 = st.columns([3,1])
-with c1:
-    st.markdown('Select model',unsafe_allow_html=True)
-with c2:
-    st.markdown('Infection caculator',unsafe_allow_html=True)
+# c1, c2 = st.columns([3,1])
+# with c1:
+#     st.markdown('Select model',unsafe_allow_html=True)
+# with c2:
+#     st.markdown('Infection caculator',unsafe_allow_html=True)
 
 models = st.selectbox("",("xgb","rf") )
 
