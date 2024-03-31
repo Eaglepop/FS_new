@@ -243,7 +243,7 @@ def predict():
         success='Infected'
         str1= f"""<p style='background-color: rgb(0, 204, 102, 1);
                             color: rgb(255,255,255,1);
-                            font-size: 50px;
+                            font-size: 30px;
                             border-radius: 10px;
                             padding-left: 13px;
                             padding-top: 15px;
