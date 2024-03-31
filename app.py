@@ -241,7 +241,7 @@ def predict():
         # st.success('Infected')
         
         success='Infected'
-        str1= f"""<p style='background-color: rgb(0, 204, 102, 1);
+        str1= f"""<p style='background-color: rgb(204, 0, 0, 1);
                             color: rgb(255,255,255,1);
                             font-size: 30px;
                             border-radius: 10px;
