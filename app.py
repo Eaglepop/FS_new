@@ -17,7 +17,7 @@ import sys
 # Create a app title with title method
 st.title('Post-DCSD')
 
-st.markdown('<p style= "font-size": 100px;>Select Model                                 Infection Caculator</p>', unsafe_allow_html=True)
+# st.markdown('<p style= "font-size": 100px;>Select Model                                 Infection Caculator</p>', unsafe_allow_html=True)
 
 # We called back our models created before
 # model1 =pickle.load(open("ada_xgb.pkl","rb"))
