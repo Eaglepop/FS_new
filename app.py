@@ -256,9 +256,10 @@ def predict():
         
         sd= probability[1]
         str2= f"""<p style='font-size: 50px;
+                            color: rgb(255,255,255,1);
                             {sd}</style>
                             <BR></p>"""
-        st.markdown(probability[1], unsafe_allow_html=True)
+        st.markdown(sd, unsafe_allow_html=True)
         
         
         # st.subheader('Infected probability:', probability[1])
