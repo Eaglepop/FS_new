@@ -132,6 +132,7 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 #                                       "smtnc_xgb","smtnc_rf","smtnc_lgbm",
 #                                       "smttom_xgb","smttom_rf","smttom_lgbm",
 #                                       "ada_xgb","ada_rf","ada_lgbm") )
+st.markdown('<p style= "font-size": 100px;>Select Model                                 Infection Caculator</p>', unsafe_allow_html=True)
 models = st.selectbox("Select Model",("xgb","rf") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
