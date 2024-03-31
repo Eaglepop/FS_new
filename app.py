@@ -136,15 +136,13 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 
 st.markdown('##')
 
-text = "Welcome to the first day... of the rest... of your life"
-
-
-t = st.empty()
-for i in range(len(text) + 1):
-    t.markdown("## %s..." % text[0:i])
-    # time.sleep(0.1)
+# text = "Welcome to the first day... of the rest... of your life"
+# t = st.empty()
+# for i in range(len(text) + 1):
+#     t.markdown("## %s..." % text[0:i])
+#     # time.sleep(0.1)
     
-models = st.selectbox("Select Model                   Infection Caculator",("xgb","rf") )
+models = st.selectbox("",("xgb","rf") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
 if models == "xgb":
