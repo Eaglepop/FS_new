@@ -176,7 +176,7 @@ elif models == "rf":
 # hp = st.slider("What is the horsepower of your car",60,200,step=5)
 # km=st.slider("What is the km of your car?",0,100000,step=500)
 # car_model=st.selectbox("Select model of your car", ('A1', 'A2', 'A3','Astra','Clio','Corsa','Espace','Insignia'))
-st.markdown()
+
 st.markdown('<p style= "font-size": 100px;>Infected Caculator</p>', unsafe_allow_html=True)
 
 
