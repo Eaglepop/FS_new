@@ -134,7 +134,7 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 #                                       "smttom_xgb","smttom_rf","smttom_lgbm",
 #                                       "ada_xgb","ada_rf","ada_lgbm") )
 
-st.markdown('###')
+st.markdown('########')
 
 c1, c2 = st.columns([2,1])
 c1.subheader('Select model')
