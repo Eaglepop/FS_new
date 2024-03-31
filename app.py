@@ -256,7 +256,7 @@ def predict():
         
         sd= probability[1]
         str2= f"""<p style='color: rgb(255,255,255,1);
-                            font-size: 50px;
+                            font-size: 30px;
                             line-height: 25px;'>
                             {sd}</style>
                             <BR></p>"""
