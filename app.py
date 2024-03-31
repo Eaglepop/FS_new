@@ -262,7 +262,7 @@ def predict():
         #                     {str21}</style>
         #                     <BR></p>"""
                             
-        str22= 'Infected probability:',probability[1]
+        str22= {"Infected probability":probability[1]}
         str22= f"""<p style='color: rgb(255,255,255,1);
                             font-size: 25px;
                             line-height: 25px;'>
