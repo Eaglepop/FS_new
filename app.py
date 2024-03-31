@@ -136,12 +136,12 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 
 st.markdown('##')
 
-# text = "Welcome to the first day... of the rest... of your life"
-# t = st.empty()
-# for i in range(len(text) + 1):
-#     t.markdown("## %s..." % text[0:i])
-#     # time.sleep(0.1)
-    
+c1, c2 = st.columns([3,1])
+with c1:
+    st.markdown('Select model',unsafe_allow_html=True)
+with c2:
+    st.markdown('Infection caculator',unsafe_allow_html=True)
+
 models = st.selectbox("",("xgb","rf") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
