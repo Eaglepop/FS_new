@@ -136,7 +136,7 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 
 st.markdown('###')
 
-c1, c2 = st.columns([4,1])
+c1, c2 = st.columns([2,1])
 c1.subheader('Select model')
 c2.subheader('Infection caculator')
 
