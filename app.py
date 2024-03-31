@@ -253,7 +253,7 @@ def predict():
                             <BR></p>"""
         st.markdown(str1, unsafe_allow_html=True)
         
-        c1, c2 = st.columns(1)
+        c1, c2 = st.columns([1,1])
         
         str21= 'Infected probability:'
         str21= f"""<p style='color: rgb(255,255,255,1);
