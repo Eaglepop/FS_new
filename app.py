@@ -256,7 +256,7 @@ def predict():
         
         
         
-        st.write('Infected probability:', probability[1])
+        st.subheader('Infected probability:', probability[1])
     else:
         # error='<p color:Red; style= "font-size": 100px;>NotInfected</p>'
         # st.markdown(error, unsafe_allow_html=True)
