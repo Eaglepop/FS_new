@@ -178,7 +178,7 @@ elif models == "rf":
 # car_model=st.selectbox("Select model of your car", ('A1', 'A2', 'A3','Astra','Clio','Corsa','Espace','Insignia'))
 st.markdown('<p> </p>', unsafe_allow_html=True)
 st.markdown('<p> </p>', unsafe_allow_html=True)
-st.markdown('<p style= "font-size": 100px;>Infected Caculator</p>', unsafe_allow_html=True)
+st.markdown('<p style= "font-size": 100px;>Infection Caculator</p>', unsafe_allow_html=True)
 
 
 Age = st.slider("Age",1,100,step=1)
