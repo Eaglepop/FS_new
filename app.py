@@ -254,7 +254,7 @@ def predict():
         st.markdown(str1, unsafe_allow_html=True)
         
         
-        sd= probability[1]
+        sd= 'Infected probability:',probability[1]
         str2= f"""<p style='color: rgb(255,255,255,1);
                             font-size: 30px;
                             line-height: 25px;'>
