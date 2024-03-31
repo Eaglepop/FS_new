@@ -255,21 +255,21 @@ def predict():
         
         c1, c2 = st.columns([0.5,0.5])
         
-        str21= 'Infected probability:'
-        str21= f"""<p style='color: rgb(255,255,255,1);
-                            font-size: 25px;
-                            line-height: 25px;'>
-                            {str21}</style>
-                            <BR></p>"""
+        # str21= 'Infected probability:'
+        # str21= f"""<p style='color: rgb(255,255,255,1);
+        #                     font-size: 25px;
+        #                     line-height: 25px;'>
+        #                     {str21}</style>
+        #                     <BR></p>"""
                             
-        str22= probability[1]
+        str22= {"Infected probability":probability[1]}
         str22= f"""<p style='color: rgb(255,255,255,1);
                             font-size: 25px;
                             line-height: 25px;'>
                             {str22}</style>
                             <BR></p>"""
-        c1.markdown(str21, unsafe_allow_html=True)                    
-        c2.markdown(str22, unsafe_allow_html=True)
+        # c1.markdown(str21, unsafe_allow_html=True)                    
+        st.markdown(str22, unsafe_allow_html=True)
         
         
         # st.subheader('Infected probability:', probability[1])
