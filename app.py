@@ -137,8 +137,8 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 st.markdown('##')
 
 c1, c2 = st.columns([3,1])
-c1.write('Select model')
-c2.write('Infection caculator')
+c1.subheader('Select model')
+c2.subheader('Infection caculator')
 
 models = st.selectbox('',("xgb","rf") )
 
