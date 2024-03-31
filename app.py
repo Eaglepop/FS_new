@@ -140,7 +140,7 @@ c1, c2 = st.columns([3,1])
 c1.write('Select model')
 c2.write('Infection caculator')
 
-models = st.selectbox(("xgb","rf") )
+models = st.selectbox(c1,c2,("xgb","rf") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
 if models == "xgb":
