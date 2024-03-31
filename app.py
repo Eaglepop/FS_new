@@ -255,8 +255,9 @@ def predict():
         
         
         sd= probability[1]
-        str2= f"""<p style='font-size: 50px;
-                            color: rgb(255,255,255,1);
+        str2= f"""<p style='color: rgb(255,255,255,1);
+                            font-size: 50px;
+                            line-height: 25px;'>
                             {sd}</style>
                             <BR></p>"""
         st.markdown(str2, unsafe_allow_html=True)
