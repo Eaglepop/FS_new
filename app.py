@@ -133,7 +133,7 @@ with open('ada_lgbm_i.pkl', 'rb') as f:
 #                                       "smtnc_xgb","smtnc_rf","smtnc_lgbm",
 #                                       "smttom_xgb","smttom_rf","smttom_lgbm",
 #                                       "ada_xgb","ada_rf","ada_lgbm") )
-
+st.markdown('##')
 models = st.selectbox("Select Model                   Infection Caculator",("xgb","rf") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
