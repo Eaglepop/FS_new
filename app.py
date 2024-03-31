@@ -254,9 +254,14 @@ def predict():
         st.markdown(str1, unsafe_allow_html=True)
         
         
+        sd= 'Infected probability:', probability[1]
+        str2= f"""<p style='font-size: 50px;
+                            {sd}</style>
+                            <BR></p>"""
+        st.markdown(str2, unsafe_allow_html=True)
         
         
-        st.subheader('Infected probability:', probability[1])
+        # st.subheader('Infected probability:', probability[1])
     else:
         # error='<p color:Red; style= "font-size": 100px;>NotInfected</p>'
         # st.markdown(error, unsafe_allow_html=True)
