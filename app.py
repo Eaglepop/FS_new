@@ -15,7 +15,7 @@ import sys
 # sys.path.append('/opt/homebrew/anaconda3/envs/venv38/lib/python3.8/site-packages')
 
 # Create a app title with title method
-st.title('Post-DCSD')
+st.title('Post-DCSD Infection Caculator')
 
 # st.markdown('<p style= "font-size": 100px;>Select Model                                 Infection Caculator</p>', unsafe_allow_html=True)
 
@@ -139,7 +139,7 @@ st.markdown('##')
 
 c1, c2 = st.columns([2,1])
 c1.subheader('Select model')
-c2.subheader('Infection caculator')
+# c2.subheader('Infection caculator')
 
 models = st.selectbox("",("XGB","RF") )
 
