@@ -248,7 +248,7 @@ def predict():
                           
         str2= {'Infected probability':probability[1]}
         str2= f"""<p style='background-color: rgb(0,0,0);
-                             color: rgb(255,255,255,1);
+                             color: rgb(204,0,0,1);
                              font-size: 25px;
                              border-radius: 10px;
                             padding-left: 12px;
@@ -283,7 +283,7 @@ def predict():
                           
         str2= {'Infected probability':probability[1]}
         str2= f"""<p style='background-color: rgb(0,0,0);
-                             color: rgb(255,255,255,1);
+                             color: rgb(0,240,102,1);
                              font-size: 25px;
                              border-radius: 10px;
                             padding-left: 12px;
