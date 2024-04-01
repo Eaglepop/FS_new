@@ -260,9 +260,9 @@ def predict():
         #                     line-height: 25px;'>
         #                     {str21}</style>
         #                     <BR></p>"""
-                            
+                          
         str22= {'Infected probability':probability[1]}
-        str22= f"""<p style='background-color: rgb(255, 255, 255, 0);
+        str22= f"""<p style='background-color: rgb(0,0,0);
                              color: rgb(255,255,255,1);
                              font-size: 25px;
                              border-radius: 10px;
