@@ -232,13 +232,6 @@ def predict():
     print(model.predict(df)[0])
      
     if prediction == 1:
-        # success='<p color:Green; style= "font-size": 100px;>Infected</p>'
-        # st.markdown(success, unsafe_allow_html=True)
-        # st.markdown('<p color:Green; style= "font-size": 100px;>Infected probability: probability[1]</p>', unsafe_allow_html=True)
-
-
-        # st.success('<p style= "font-size": 50px;>Infected</p>')
-        # st.success('Infected')
         
         success='Infected'
         str1= f"""<p style='background-color: rgb(204, 0, 0, 1);
@@ -252,17 +245,9 @@ def predict():
                             {success}</style>
                             <BR></p>"""
         st.markdown(str1, unsafe_allow_html=True)
-        
-        # c1, c2 = st.columns([0.5,0.5])
-        # str21= 'Infected probability:'
-        # str21= f"""<p style='color: rgb(255,255,255,1);
-        #                     font-size: 25px;
-        #                     line-height: 25px;'>
-        #                     {str21}</style>
-        #                     <BR></p>"""
                           
-        str22= {'Infected probability':probability[1]}
-        str22= f"""<p style='background-color: rgb(0,0,0);
+        str2= {'Infected probability':probability[1]}
+        str2= f"""<p style='background-color: rgb(0,0,0);
                              color: rgb(255,255,255,1);
                              font-size: 25px;
                              border-radius: 10px;
@@ -270,25 +255,47 @@ def predict():
                             padding-top: 13px;
                             padding-bottom: 13px;
                              line-height: 25px;'>
-                             {str22}</style>
+                             {str2}</style>
                              <BR></p>"""
         # c1.markdown(str21, unsafe_allow_html=True)                    
-        st.markdown(str22, unsafe_allow_html=True)
+        st.markdown(str2, unsafe_allow_html=True)
         
         st.markdown('##')
         
         
-        # st.subheader('Infected probability:', probability[1])
+        
     else:
-        # error='<p color:Red; style= "font-size": 100px;>NotInfected</p>'
-        # st.markdown(error, unsafe_allow_html=True)
-
+        # st.error('Not Infected')
+        # st.write('Infected probability:', probability[1])
         
-        # st.error('<p style= "font-size": 50px;>Not Infected</p>')
-        st.error('Not Infected')
+        error='Not Infected'
+        str1= f"""<p style='background-color: rgb(0, 240, 102, 1);
+                            color: rgb(255,255,255,1);
+                            font-size: 30px;
+                            border-radius: 10px;
+                            padding-left: 13px;
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                            line-height: 25px;'>
+                            {error}</style>
+                            <BR></p>"""
+        st.markdown(str1, unsafe_allow_html=True)
+                          
+        str2= {'Infected probability':probability[1]}
+        str2= f"""<p style='background-color: rgb(0,0,0);
+                             color: rgb(255,255,255,1);
+                             font-size: 25px;
+                             border-radius: 10px;
+                            padding-left: 12px;
+                            padding-top: 13px;
+                            padding-bottom: 13px;
+                             line-height: 25px;'>
+                             {str2}</style>
+                             <BR></p>"""
+        # c1.markdown(str21, unsafe_allow_html=True)                    
+        st.markdown(str2, unsafe_allow_html=True)
         
-        
-        st.write('Infected probability:', probability[1])
+        st.markdown('##')
         
    
     
