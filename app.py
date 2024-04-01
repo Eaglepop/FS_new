@@ -250,10 +250,7 @@ def predict():
         str2= f"""<p style='background-color: rgb(0,0,0);
                              color: rgb(204,0,0,1);
                              font-size: 25px;
-                             border-radius: 10px;
-                            padding-left: 12px;
-                            padding-top: 13px;
-                            padding-bottom: 13px;
+                             
                              line-height: 25px;'>
                              {str2}</style>
                              <BR></p>"""
