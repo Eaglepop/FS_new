@@ -15,7 +15,7 @@ import sys
 # sys.path.append('/opt/homebrew/anaconda3/envs/venv38/lib/python3.8/site-packages')
 
 # Create a app title with title method
-st.title('Post-DCSD Infection Caculator')
+st.title('Post-DCSD Infection Rate Caculator')
 
 # st.markdown('<p style= "font-size": 100px;>Select Model                                 Infection Caculator</p>', unsafe_allow_html=True)
 
