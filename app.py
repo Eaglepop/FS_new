@@ -253,8 +253,7 @@ def predict():
                             <BR></p>"""
         st.markdown(str1, unsafe_allow_html=True)
         
-        c1, c2 = st.columns([0.5,0.5])
-        
+        # c1, c2 = st.columns([0.5,0.5])
         # str21= 'Infected probability:'
         # str21= f"""<p style='color: rgb(255,255,255,1);
         #                     font-size: 25px;
@@ -263,11 +262,16 @@ def predict():
         #                     <BR></p>"""
                             
         str22= {'Infected probability':probability[1]}
-        str22= f"""<p style='color: rgb(255,255,255,1);
-                            font-size: 25px;
-                            line-height: 25px;'>
-                            {str22}</style>
-                            <BR></p>"""
+        str22= f"""<p style='background-color: rgb(0, 0, 0, 0);
+                             color: rgb(255,255,255,1);
+                             font-size: 25px;
+                             border-radius: 10px;
+                            padding-left: 12px;
+                            padding-top: 13px;
+                            padding-bottom: 13px;
+                             line-height: 25px;'>
+                             {str22}</style>
+                             <BR></p>"""
         # c1.markdown(str21, unsafe_allow_html=True)                    
         st.markdown(str22, unsafe_allow_html=True)
         
