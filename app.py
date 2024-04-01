@@ -256,11 +256,6 @@ def predict():
         st.markdown(str2, unsafe_allow_html=True)
         
         st.markdown('##')
-        # background-color: rgb(0,0,0)
-        # border-radius: 10px;
-        #                     padding-left: 12px;
-        #                     padding-top: 13px;
-        #                     padding-bottom: 13px;
         
     else:
         # st.error('Not Infected')
@@ -280,14 +275,9 @@ def predict():
         st.markdown(str1, unsafe_allow_html=True)
                           
         str2= {'Infected probability':probability[1]}
-        str2= f"""<p style='background-color: rgb(0,0,0);
-                             color: rgb(0,240,102,1);
-                             font-size: 25px;
-                             border-radius: 10px;
-                            padding-left: 12px;
-                            padding-top: 13px;
-                            padding-bottom: 13px;
-                             line-height: 25px;'>
+        str2= f"""<p style='color: rgb(0,240,102,1);
+                            font-size: 25px;
+                            line-height: 25px;'>
                              {str2}</style>
                              <BR></p>"""
         # c1.markdown(str21, unsafe_allow_html=True)                    
