@@ -141,11 +141,11 @@ c1, c2 = st.columns([2,1])
 c1.subheader('Select model')
 # c2.subheader('Infection caculator')
 
-models = st.selectbox("",("LGBM","RF") )
+models = st.selectbox("",("XGB","RF") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
-if models == "LGBM":
-    model = model3
+if models == "XGB":
+    model = model1
 elif models == "RF":
     model = model2
 # if models == "ros_xgb":
