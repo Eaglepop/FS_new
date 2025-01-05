@@ -145,7 +145,7 @@ models = st.selectbox("",("LGBM","RF") )
 
 # And specified a condition if users select Random forest use random forest model else use Xgboost model.
 if models == "LGBM":
-    model = model3
+    model = model0
 elif models == "RF":
     model = model2
 # if models == "ros_xgb":
