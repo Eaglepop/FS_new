@@ -71,8 +71,8 @@ st.title('Post-DCSD Infection Rate Caculator')
     
 
 
-
-
+with open('ros_rf_b.pkl', 'rb') as f:
+    model0 = pickle.load(f)
 
 with open('ros_xgb_i.pkl', 'rb') as f:
     model1 = pickle.load(f)
