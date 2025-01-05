@@ -292,6 +292,11 @@ def predict():
 
 st.button('Predict', on_click=predict)
 
+
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
+
 # df = pd.DataFrame.from_dict([my_dict])
 # # And appended column names into column list. We need columns to use with reindex method as we mentioned before.
 # df = pd.get_dummies(df).reindex(columns=columns, fill_value=0)
